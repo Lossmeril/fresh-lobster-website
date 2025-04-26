@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "films"            # Unique ID for the collection
+    label: "Films"            # Label shown in CMS UI
+    folder: "content/films"   # Folder for markdown files
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title" }
+      - { name: "release_date", label: "Release Date", widget: "datetime" }
+      - { name: "synopsis", label: "Synopsis", widget: "text" }
+      - { name: "poster", label: "Poster Image", widget: "image" }
+      - { name: "trailer_url", label: "Trailer URL", widget: "string", required: false }
+      - { name: "draft", label: "Draft", widget: "boolean", default: false }
+      - { name: "body", label: "Details / Director's Notes", widget: "markdown" }
