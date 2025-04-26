@@ -26,7 +26,7 @@ export default async function ProjectsSection() {
     .filter((film) => !film.draft);
 
   return (
-    <section className="h-screen bg-white overflow-x-hidden">
+    <section id="projekty" className="h-screen bg-white overflow-x-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 h-[30em]">
         {films.map((film) => (
           <div
