@@ -10,11 +10,11 @@ interface FilmProps {
 }
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync("content/posts");
+  const files = fs.readdirSync("content/films");
   return files
     .map((filename) => {
       const fileContent = fs.readFileSync(
-        path.join("content/posts", filename),
+        path.join("content/films", filename),
         "utf-8"
       );
       const { data } = matter(fileContent);

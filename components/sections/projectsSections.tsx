@@ -1,11 +1,11 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import Link from "next/link";
+
 import Image from "next/image";
 import Button from "../button";
 
-export default async function FilmsSection() {
+export default async function ProjectsSection() {
   const files = fs.readdirSync("content/films");
   const films = files
     .map((filename) => {
@@ -20,6 +20,7 @@ export default async function FilmsSection() {
         title: data.title,
         synopsis: data.synopsis,
         trailer_url: data.trailer_url,
+        release_date: data.release_date,
         draft: data.draft,
       };
     })
@@ -31,12 +32,17 @@ export default async function FilmsSection() {
         {films.map((film) => (
           <div
             key={film.slug}
-            className="overflow-hidden bg-lobster-100 grid place-content-center relative"
+            className="overflow-hidden grid place-content-center relative bg-[#888888]"
           >
-            <Image src={film.poster} alt={film.title} fill />
-            <div className="p-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={film.poster}
+              alt={film.title}
+              className="absolute object-cover z-index-0 w-full h-full mix-blend-multiply hover:scale-105 transition-transform duration-500 ease-in-out"
+            />
+            <div className="p-4 z-10 text-center text-white">
               <h2 className="text-4xl font-bold uppercase">{film.title}</h2>
-              <p className="text-sm">{film.synopsis}</p>
+              <p>{new Date(film.release_date).getFullYear()}</p>
 
               <div className="flex gap-4 mt-4">
                 <Button link={`/films/${film.slug}`} inverse={false}>

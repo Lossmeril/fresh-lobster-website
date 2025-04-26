@@ -1,16 +1,22 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: main
+
+local_backend: true
+
+logo_url: "https://coalmarketing.cz/wp-content/uploads/2024/08/coalmarketing_logo_long_color-black-1024x239.png"
+locale: "en"
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "films"            # Unique ID for the collection
-    label: "Films"            # Label shown in CMS UI
-    folder: "content/films"   # Folder for markdown files
+  - name: "films"
+    label: "Films"
+    folder: "content/films"
     create: true
     slug: "{{slug}}"
+    preview: true
     fields:
       - { name: "title", label: "Title" }
       - { name: "release_date", label: "Release Date", widget: "datetime" }
