@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-import Image from "next/image";
 import Button from "../button";
 
 export default async function ProjectsSection() {
@@ -16,7 +15,7 @@ export default async function ProjectsSection() {
       const { data } = matter(fileContent);
       return {
         slug: filename.replace(".md", ""),
-        poster: data.poster,
+        still: data.still,
         title: data.title,
         synopsis: data.synopsis,
         trailer_url: data.trailer_url,
@@ -36,7 +35,7 @@ export default async function ProjectsSection() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={film.poster}
+              src={film.still}
               alt={film.title}
               className="absolute object-cover z-index-0 w-full h-full mix-blend-multiply hover:scale-105 transition-transform duration-500 ease-in-out"
             />
@@ -46,11 +45,11 @@ export default async function ProjectsSection() {
 
               <div className="flex gap-4 mt-4">
                 <Button link={`/films/${film.slug}`} inverse={false}>
-                  Read more
+                  Více o projektu
                 </Button>
 
                 <Button link={film.trailer_url} inverse={true}>
-                  Watch trailer
+                  Pustit trailer
                 </Button>
               </div>
             </div>
