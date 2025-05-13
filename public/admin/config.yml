@@ -1,0 +1,27 @@
+backend:
+  name: test-repo
+  branch: main
+
+local_backend: true
+
+logo_url: "https://coalmarketing.cz/wp-content/uploads/2024/08/coalmarketing_logo_long_color-black-1024x239.png"
+locale: "cs"
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "films"
+    label: "Filmy / Projekty"
+    folder: "content/films"
+    create: true
+    slug: "{{slug}}"
+    preview: true
+    fields:
+      - { name: "title", label: "Název" }
+      - { name: "release_date", label: "Datum vydání", widget: "datetime" }
+      - { name: "synopsis", label: "Synopse", widget: "text" }
+      - { name: "still", label: "Obrázek", widget: "image" }
+      - { name: "trailer_url", label: "Odkaz a trailer", widget: "string", required: false }
+      - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }
+      - { name: "body", label: "Obsah článku", widget: "markdown" }

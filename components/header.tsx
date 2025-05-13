@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const links = [
   ["/", "Domů"],
   ["/o-nas", "O nás"],
-  ["/projekty", "Projekty"],
+  ["#projekty", "Projekty"],
   ["/kontakt", "Kontakt"],
 ];
 
@@ -21,7 +21,7 @@ interface NavbarLinkProps {
 const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
   return (
     <Link
-      href=""
+      href={link}
       className="font-medium text-lg rotate-hover hover:text-lobster"
     >
       <p>{children}</p>
@@ -48,7 +48,7 @@ const Header = () => {
           {/* --------------------- DESKTOP NAVBAR --------------------- */}
           <div className="hidden md:flex flex-row md:gap-6 lg:gap-12 h-full justify-center items-center">
             {links.map((link) => (
-              <NavbarLink key={link[0]} link="">
+              <NavbarLink key={link[0]} link={link[0]}>
                 {link[1]}
               </NavbarLink>
             ))}

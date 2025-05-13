@@ -1,3 +1,4 @@
+import ProjectsSection from "@/components/sections/projectsSections";
 import Image from "next/image";
 
 const HomePage = () => {
@@ -25,6 +26,7 @@ const HomePage = () => {
           </video>
         </section>
         <section className="h-screen bg-lobster"></section>
+        <ProjectsSection />
       </main>
     </>
   );
