@@ -32,7 +32,7 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ children, link }) => {
 const Header = () => {
   return (
     <header>
-      <nav className="navbar w-screen h-24 fixed bg-white shadow-sm z-50">
+      <nav className="navbar w-screen h-24 fixed bg-white shadow-sm z-[100]">
         <div className="flex flex-row gap-6 h-full justify-between items-center mx-[5vw] lg:mx-[10vw]">
           <div className="w-[118px] relative aspect-[12/5]">
             <a href="/">
