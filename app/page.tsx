@@ -191,7 +191,7 @@ const HomePage = () => {
           ref={smallCircleRef1}
         ></div>
         <div
-          className="bg-lobster absolute w-80 aspect-square rounded-full top-[100px] scale-0 left-[75%] -translate-x-1/2 z-30"
+          className="bg-lobster absolute w-80 aspect-square rounded-full top-[300px] scale-0 left-[75%] -translate-x-1/2 z-30"
           ref={smallCircleRef2}
         ></div>
 
@@ -207,16 +207,34 @@ const HomePage = () => {
                 Chtěli jsme být tvůrci.
               </p>
               <p className="text-white text-center text-xl mt-10">
-                Fresh Lobster vznikl z potřeby tvořit jinak. Lidsky. Poctivě.
-                Kristýna Drozdová a Ludvík Mareček&mdash;dvě osobnosti, dvě
-                cesty, které se potkaly na místě, kde nestačí „jen to natočit“.
-                Chtěli stát u zrodu projektů, které mají vnitřní tah. A přetavit
-                vlastní zkušenosti v něco, co bude mít duši.
+                Fresh Lobster vznikl z&nbsp;potřeby tvořit jinak. Lidsky.
+                Poctivě. Kristýna Drozdová a&nbsp;Ludvík Mareček&mdash;dvě
+                osobnosti, dvě cesty, které se potkaly na místě, kde nestačí
+                „jen to natočit“. Chtěli stát u&nbsp;zrodu projektů, které mají
+                vnitřní tah. A&nbsp;přetavit vlastní zkušenosti v&nbsp;něco, co
+                bude mít duši.
               </p>
             </div>
           </div>
         </section>
         {/* <ProjectsSection /> */}
+
+        <section className="h-[200vh] bg-white relative">
+          <h2 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
+            Naše projekty
+          </h2>
+          <p className="text-black text-center text-6xl font-bold mt-5 leading-[1.2]">
+            Vydupáno z prachu.
+            <br />
+            Natočeno srdcem.
+          </p>
+          <p className="text-white text-center text-xl mt-10">
+            Od Špuntů na&nbsp;vodě přes Deníček moderního fotra
+            po&nbsp;televizní cykly a&nbsp;kampaně. Každý náš projekt je
+            jedinečný&mdash;protože za&nbsp;ním stojí lidé, kterým na&nbsp;něm
+            záleží. Známe každý kámen na&nbsp;place. A&nbsp;víme, proč tam je.
+          </p>
+        </section>
       </main>
     </>
   );
