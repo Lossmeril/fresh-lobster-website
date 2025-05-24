@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Button from "@/components/button";
+
 import ProjectsSection from "@/components/sections/projectsSections";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -137,7 +138,7 @@ const HomePage = () => {
         },
       }
     );
-  });
+  }, []);
 
   return (
     <>
@@ -217,7 +218,6 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        {/* <ProjectsSection /> */}
 
         <section className="h-[200vh] bg-white relative">
           <h2 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
@@ -234,6 +234,8 @@ const HomePage = () => {
             jedinečný&mdash;protože za&nbsp;ním stojí lidé, kterým na&nbsp;něm
             záleží. Známe každý kámen na&nbsp;place. A&nbsp;víme, proč tam je.
           </p>
+
+          <ProjectsSection />
         </section>
       </main>
     </>
