@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Button from "@/components/button";
+
 import ProjectsSection from "@/components/sections/projectsSections";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -137,7 +138,7 @@ const HomePage = () => {
         },
       }
     );
-  });
+  }, []);
 
   return (
     <>
@@ -206,7 +207,7 @@ const HomePage = () => {
                 <br />
                 Chtěli jsme být tvůrci.
               </p>
-              <p className="text-white text-center text-xl mt-10">
+              <p className="text-white text-center text-xl mt-10 opacity-85 leading-tight">
                 Fresh Lobster vznikl z&nbsp;potřeby tvořit jinak. Lidsky.
                 Poctivě. Kristýna Drozdová a&nbsp;Ludvík Mareček&mdash;dvě
                 osobnosti, dvě cesty, které se potkaly na místě, kde nestačí
@@ -214,26 +215,44 @@ const HomePage = () => {
                 vnitřní tah. A&nbsp;přetavit vlastní zkušenosti v&nbsp;něco, co
                 bude mít duši.
               </p>
+              <div className="flex flex-row justify-center mt-10 gap-5">
+                <Button link={"/"} inverse>
+                  Více o našem příběhu
+                </Button>
+                <Button link={"/"} inverse>
+                  Jaké příběhy jsme vyprávěli
+                </Button>
+              </div>
             </div>
           </div>
         </section>
-        {/* <ProjectsSection /> */}
 
-        <section className="h-[200vh] bg-white relative">
+        <section className="h-[100vh] bg-white relative">
           <h2 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
             Naše projekty
           </h2>
-          <p className="text-black text-center text-6xl font-bold mt-5 leading-[1.2]">
+          <p className="text-black text-center text-6xl font-bold mt-5 leading-[1.1]">
             Vydupáno z prachu.
             <br />
             Natočeno srdcem.
           </p>
-          <p className="text-white text-center text-xl mt-10">
+          <p className="text-center text-xl mt-5 mb-10 w-1/2 mx-auto opacity-65 leading-tight">
             Od Špuntů na&nbsp;vodě přes Deníček moderního fotra
             po&nbsp;televizní cykly a&nbsp;kampaně. Každý náš projekt je
             jedinečný&mdash;protože za&nbsp;ním stojí lidé, kterým na&nbsp;něm
             záleží. Známe každý kámen na&nbsp;place. A&nbsp;víme, proč tam je.
           </p>
+
+          <ProjectsSection />
+
+          <div className="flex flex-row justify-center mt-10 gap-5">
+            <Button link={"/"} inverse={false}>
+              Prohlédnout všechny projekty
+            </Button>
+            <Button link={"/"} inverse={false}>
+              Kdo s námi spolupracuje
+            </Button>
+          </div>
         </section>
       </main>
     </>
