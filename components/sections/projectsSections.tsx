@@ -17,7 +17,7 @@ const ProjectsSection: React.FC = () => {
     fetchFilms();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Načítám projekty...</div>;
 
   return <ProjectsSectionComp films={films} />;
 };

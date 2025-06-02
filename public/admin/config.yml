@@ -21,6 +21,7 @@ collections:
       - { name: "title", label: "Název" }
       - { name: "release_date", label: "Datum vydání", widget: "datetime" }
       - { name: "synopsis", label: "Synopse", widget: "text" }
+      - { name: "poster", label: "Plakát", widget: "image" }
       - { name: "still", label: "Obrázek", widget: "image" }
       - { name: "trailer_url", label: "Odkaz a trailer", widget: "string", required: false }
       - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }
