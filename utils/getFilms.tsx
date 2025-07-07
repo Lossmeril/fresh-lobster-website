@@ -10,7 +10,7 @@ export type Film = {
   title: string;
   synopsis: string;
   trailer_url: string;
-  release_date: string;
+  release_date: Date;
   draft?: boolean;
 };
 

@@ -26,3 +26,15 @@ collections:
       - { name: "trailer_url", label: "Odkaz a trailer", widget: "string", required: false }
       - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }
       - { name: "body", label: "Obsah článku", widget: "markdown" }
+
+  - name: "people"
+    label: "Spolupracovníci"
+    folder: "content/people"
+    create: true
+    slug: "{{slug}}"
+    preview: true
+    fields:
+      - { name: "name", label: "Jméno" }
+      - { name: "photo", label: "Fotografie", widget: "image" }
+      - { name: "role", label: "Role", widget: "string" }
+      - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }

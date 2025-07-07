@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "@/components/button";
 
 import ProjectsSection from "@/components/sections/projectsSections";
+import PeopleSection from "@/components/sections/peopleSections";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -227,6 +228,10 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* ------------------------------------------------------ */}
+        {/* ---------------------- PROJEKTY ---------------------- */}
+        {/* ------------------------------------------------------ */}
+
         <section className="h-[100vh] bg-white relative">
           <h2 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
             Naše projekty
@@ -252,6 +257,38 @@ const HomePage = () => {
             <Button link={"/"} inverse={false}>
               Kdo s námi spolupracuje
             </Button>
+          </div>
+        </section>
+
+        {/* ------------------------------------------------------------- */}
+        {/* ---------------------- SPOLUPRACOVNÍCI ---------------------- */}
+        {/* ------------------------------------------------------------- */}
+
+        <section className="h-[100vh] bg-white relative flex p-[10%] gap-10">
+          <div className="w-[50%] mx-auto flex flex-col justify-center items-start">
+            <h2 className="text-lobster text-left text-2xl uppercase font-bold mt-20">
+              Koho máme kolem sebe
+            </h2>
+            <p className="text-black text-left text-6xl font-bold mt-5 leading-[1.1]">
+              Tvoříme s lidmi,
+              <br />
+              kterým věříme.
+            </p>
+            <p className="text-left text-xl mt-5 mb-10  mr-auto opacity-65 leading-tight">
+              Filmový štáb není parta náhodných techniků. Je to&nbsp;organismus.
+              Každý člověk má svůj otisk, a my si dáváme záležet, koho
+              k&nbsp;sobě pouštíme. Protože dobrý projekt začíná u&nbsp;dobrých
+              vztahů.
+            </p>
+
+            <div className="flex flex-row justify-start mt-10 gap-5">
+              <Button link={"/"} inverse={false}>
+                S kým spolupracujeme
+              </Button>
+            </div>
+          </div>
+          <div className="w-[50%] mx-auto bg-lobster-100 blob">
+            <PeopleSection />
           </div>
         </section>
       </main>
