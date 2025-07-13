@@ -10,10 +10,12 @@ import ProjectsSection from "@/components/sections/projectsSections";
 import PeopleSection from "@/components/sections/peopleSections";
 import { UspSection } from "@/components/sections/uspSection";
 import ContactSection from "@/components/sections/contactSection";
+import ProjectsSectionComp from "@/components/sections/projectsSectionComp";
+import { Film, getFilms } from "@/utils/getFilms";
 
 // gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const HomePage = () => {
+const HomePage = async () => {
   // const mainCircleRef = useRef(null);
   // const smallCircleRef1 = useRef(null);
   // const smallCircleRef2 = useRef(null);
@@ -140,6 +142,8 @@ const HomePage = () => {
   //     }
   //   );
   // }, []);
+
+  const films: Film[] = await getFilms();
 
   return (
     <>
@@ -294,7 +298,7 @@ const HomePage = () => {
             záleží. Známe každý kámen na&nbsp;place. A&nbsp;víme, proč tam je.
           </p>
 
-          <ProjectsSection />
+          <ProjectsSectionComp films={films} />
 
           <div className="flex flex-row justify-center mt-10 gap-5">
             <Button link={"/"} inverse={false}>
