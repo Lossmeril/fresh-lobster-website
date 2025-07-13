@@ -21,6 +21,7 @@ export default function RootLayout({
       <body className={`${font.className} max-w-screen overflow-x-hidden`}>
         <Header />
         {children}
+
         <Footer />
       </body>
     </html>

@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 
 import { gsap } from "gsap";
@@ -387,7 +385,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
     </>
   );
