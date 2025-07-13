@@ -13,142 +13,142 @@ import PeopleSection from "@/components/sections/peopleSections";
 import { UspSection } from "@/components/sections/uspSection";
 import ContactSection from "@/components/sections/contactSection";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+// gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const HomePage = () => {
-  const mainCircleRef = useRef(null);
-  const smallCircleRef1 = useRef(null);
-  const smallCircleRef2 = useRef(null);
+  // const mainCircleRef = useRef(null);
+  // const smallCircleRef1 = useRef(null);
+  // const smallCircleRef2 = useRef(null);
 
-  const heroBannerRef = useRef(null);
-  const aboutSectionRef = useRef(null);
+  // const heroBannerRef = useRef(null);
+  // const aboutSectionRef = useRef(null);
 
-  useEffect(() => {
-    const indexCircle = mainCircleRef.current;
-    const smallCircle1 = smallCircleRef1.current;
-    const smallCircle2 = smallCircleRef2.current;
+  // useEffect(() => {
+  //   const indexCircle = mainCircleRef.current;
+  //   const smallCircle1 = smallCircleRef1.current;
+  //   const smallCircle2 = smallCircleRef2.current;
 
-    const heroBanner = heroBannerRef.current;
-    const aboutSection = aboutSectionRef.current;
+  //   const heroBanner = heroBannerRef.current;
+  //   const aboutSection = aboutSectionRef.current;
 
-    gsap.fromTo(
-      indexCircle,
-      { scale: 0, y: "100vh", opacity: 1 },
-      {
-        ease: "none",
-        scale: 7,
-        y: "0vh",
-        opacity: 1,
-        duration: 3,
-        scrollTrigger: {
-          trigger: heroBanner,
-          start: "50% center",
-          end: "100% center",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      indexCircle,
-      { opacity: 1 },
-      {
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: heroBanner,
-          start: "100% top",
-          end: "100% top",
-          scrub: true,
-        },
-      }
-    );
+  //   gsap.fromTo(
+  //     indexCircle,
+  //     { scale: 0, y: "100vh", opacity: 1 },
+  //     {
+  //       ease: "none",
+  //       scale: 7,
+  //       y: "0vh",
+  //       opacity: 1,
+  //       duration: 3,
+  //       scrollTrigger: {
+  //         trigger: heroBanner,
+  //         start: "50% center",
+  //         end: "100% center",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     indexCircle,
+  //     { opacity: 1 },
+  //     {
+  //       opacity: 0,
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: heroBanner,
+  //         start: "100% top",
+  //         end: "100% top",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
 
-    gsap.fromTo(
-      smallCircle1,
-      { scale: 0, y: "30vh", opacity: 1 },
-      {
-        ease: "none",
-        scale: 2,
-        y: "10vh",
-        opacity: 1,
-        duration: 3,
-        scrollTrigger: {
-          trigger: heroBanner,
-          start: "60% center",
-          end: "100% center",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      smallCircle1,
-      { opacity: 1 },
-      {
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: heroBanner,
-          start: "100% top",
-          end: "100% top",
-          scrub: true,
-        },
-      }
-    );
+  //   gsap.fromTo(
+  //     smallCircle1,
+  //     { scale: 0, y: "30vh", opacity: 1 },
+  //     {
+  //       ease: "none",
+  //       scale: 2,
+  //       y: "10vh",
+  //       opacity: 1,
+  //       duration: 3,
+  //       scrollTrigger: {
+  //         trigger: heroBanner,
+  //         start: "60% center",
+  //         end: "100% center",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     smallCircle1,
+  //     { opacity: 1 },
+  //     {
+  //       opacity: 0,
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: heroBanner,
+  //         start: "100% top",
+  //         end: "100% top",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
 
-    gsap.fromTo(
-      smallCircle2,
-      { scale: 0, y: "10vh", opacity: 1 },
-      {
-        ease: "none",
-        scale: 5,
-        y: "10vh",
-        opacity: 1,
-        duration: 3,
-        scrollTrigger: {
-          trigger: heroBanner,
-          start: "75% center",
-          end: "100% center",
-          scrub: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      smallCircle2,
-      { opacity: 1 },
-      {
-        opacity: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: heroBanner,
-          start: "100% top",
-          end: "100% top",
-          scrub: true,
-        },
-      }
-    );
+  //   gsap.fromTo(
+  //     smallCircle2,
+  //     { scale: 0, y: "10vh", opacity: 1 },
+  //     {
+  //       ease: "none",
+  //       scale: 5,
+  //       y: "10vh",
+  //       opacity: 1,
+  //       duration: 3,
+  //       scrollTrigger: {
+  //         trigger: heroBanner,
+  //         start: "75% center",
+  //         end: "100% center",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     smallCircle2,
+  //     { opacity: 1 },
+  //     {
+  //       opacity: 0,
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: heroBanner,
+  //         start: "100% top",
+  //         end: "100% top",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
 
-    gsap.fromTo(
-      aboutSection,
-      { backgroundColor: "white" },
-      {
-        backgroundColor: "#ED1C24",
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutSection,
-          start: "top center",
-          end: "top center",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  //   gsap.fromTo(
+  //     aboutSection,
+  //     { backgroundColor: "white" },
+  //     {
+  //       backgroundColor: "#ED1C24",
+  //       duration: 1,
+  //       scrollTrigger: {
+  //         trigger: aboutSection,
+  //         start: "top center",
+  //         end: "top center",
+  //         scrub: true,
+  //       },
+  //     }
+  //   );
+  // }, []);
 
   return (
     <>
       <main className="max-w-screen overflow-x-hidden">
         <section
           className="h-screen bg-white overflow-x-hidden"
-          ref={heroBannerRef}
+          // ref={heroBannerRef}
         >
           <div className="absolute top-[50%] left-[10%] translate-y-[-50%] w-[700px] aspect-video z-[30]">
             <h1 className="text-lobster text-left text-2xl uppercase font-bold mt-20">
@@ -188,18 +188,21 @@ const HomePage = () => {
 
         <div
           className="bg-lobster absolute w-80 aspect-square rounded-full scale-0 top-[100vh] left-[50%] -translate-x-1/2 z-30 blob blob-animated"
-          ref={mainCircleRef}
+          // ref={mainCircleRef}
         ></div>
         <div
           className="bg-lobster absolute w-80 aspect-square rounded-full top-[100px] scale-0 left-0 -translate-x-1/2 z-30 blob blob-animated"
-          ref={smallCircleRef1}
+          // ref={smallCircleRef1}
         ></div>
         <div
           className="bg-lobster absolute w-80 aspect-square rounded-full top-[300px] scale-0 left-[75%] -translate-x-1/2 z-30 blob blob-animated"
-          ref={smallCircleRef2}
+          // ref={smallCircleRef2}
         ></div>
 
-        <section className="h-[200vh] bg-white relative" ref={aboutSectionRef}>
+        <section
+          className="h-[200vh] bg-lobster relative"
+          //ref={aboutSectionRef}
+        >
           <div className="absolute top-0 left-0 w-full h-screen z-[50]">
             <div className="w-[50%] mx-auto">
               <h2 className="text-black text-center text-2xl uppercase font-bold mt-20">
