@@ -10,7 +10,7 @@ export const ContactSection: React.FC = () => (
     <p className="text-black text-center text-5xl font-bold mt-5 leading-[1] mb-5">
       Chcete něco natočit?
     </p>
-    <p className="text-center text-xl mt-5 mb-10 mx-[20%] opacity-65 leading-tight">
+    <p className="text-center text-xl mt-5 mb-10 mx-[25%] opacity-65 leading-tight">
       Chcete něco natočit? Nebo jen hledáte někoho, kdo vás pochopí? Ozvěte se.
       Jsme otevření projektům, lidem i&nbsp;výzvám
     </p>
