@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const links = [
   ["/", "Domů"],
   ["/o-nas", "O nás"],
-  ["#projekty", "Projekty"],
+  ["/projekty", "Projekty"],
   ["/kontakt", "Kontakt"],
 ];
 
