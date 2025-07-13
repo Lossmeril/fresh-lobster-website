@@ -18,7 +18,12 @@ const PeopleSection: React.FC = () => {
     fetchFilms();
   }, []);
 
-  if (loading) return <div>Načítám spolupracovníky...</div>;
+  if (loading)
+    return (
+      <div className="w-full h-full grid place-content-center">
+        Načítám spolupracovníky...
+      </div>
+    );
 
   return <PeopleSectionComp people={people} />;
 };

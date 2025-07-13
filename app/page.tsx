@@ -10,6 +10,8 @@ import Button from "@/components/button";
 
 import ProjectsSection from "@/components/sections/projectsSections";
 import PeopleSection from "@/components/sections/peopleSections";
+import { UspSection } from "@/components/sections/uspSection";
+import ContactSection from "@/components/sections/contactSection";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -185,15 +187,15 @@ const HomePage = () => {
         </section>
 
         <div
-          className="bg-lobster absolute w-80 aspect-square rounded-full scale-0 top-[100vh] left-[50%] -translate-x-1/2 z-30"
+          className="bg-lobster absolute w-80 aspect-square rounded-full scale-0 top-[100vh] left-[50%] -translate-x-1/2 z-30 blob blob-animated"
           ref={mainCircleRef}
         ></div>
         <div
-          className="bg-lobster absolute w-80 aspect-square rounded-full top-[100px] scale-0 left-0 -translate-x-1/2 z-30"
+          className="bg-lobster absolute w-80 aspect-square rounded-full top-[100px] scale-0 left-0 -translate-x-1/2 z-30 blob blob-animated"
           ref={smallCircleRef1}
         ></div>
         <div
-          className="bg-lobster absolute w-80 aspect-square rounded-full top-[300px] scale-0 left-[75%] -translate-x-1/2 z-30"
+          className="bg-lobster absolute w-80 aspect-square rounded-full top-[300px] scale-0 left-[75%] -translate-x-1/2 z-30 blob blob-animated"
           ref={smallCircleRef2}
         ></div>
 
@@ -287,10 +289,59 @@ const HomePage = () => {
               </Button>
             </div>
           </div>
-          <div className="w-[50%] mx-auto bg-lobster-100 blob">
+          <div className="w-[50%] mx-auto bg-lobster-100 blob blob-animated">
             <PeopleSection />
           </div>
         </section>
+
+        {/* ------------------------------------------------------ */}
+        {/* ---------------------- CO UMÍME ---------------------- */}
+        {/* ------------------------------------------------------ */}
+
+        <section className="bg-white relative overflow-hidden pb-20">
+          <h2 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
+            Co umíme
+          </h2>
+          <p className="text-black text-center text-6xl font-bold mt-5 leading-[1] mb-5">
+            Nesjme továrna,
+            <br />
+            jsme tvůrci
+          </p>
+
+          <UspSection />
+
+          <div className="w-3/4 mx-auto mt-16 p-10 bg-lobster-100 flex flex-col items-center relative">
+            <h3 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
+              Co nás odlišuje?
+            </h3>{" "}
+            <p className="text-black text-center text-4xl font-bold mt-5 leading-[1] mb-14">
+              Nepředstíráme, že to bude snadné.
+              <br />
+              Ale víme, že to bude stát za to.
+            </p>
+            <ul className="text-black opacity-65 text-center text-xl mb-8 space-y-3 list-disc list-inside leading-none">
+              <li>Nejsme jen produkce, jsme partneři ve vyprávění.</li>
+              <li>Umíme mainstream, který má hloubku.</li>
+              <li>Pracujeme srdcem, ale přemýšlíme hlavou.</li>
+              <li>Zajímá nás kvalita. Ne kvantita.</li>
+              <li>Náš tým je tým, ne součet individualit.</li>
+            </ul>
+            <div className="flex flex-row gap-6 mt-4">
+              <Button link="/kontakt" inverse={false}>
+                Pojďme spolupracovat
+              </Button>
+              <Button link="/o-nas" inverse>
+                Poznejte náš přístup
+              </Button>
+
+              <div className="absolute top-[-40px] left-[-60px] w-32 h-32 bg-lobster-200 blob-animated opacity-60 animate-float-slow z-10"></div>
+              <div className="absolute top-[30px] right-[-50px] w-60 h-60 bg-lobster-300 blob-animated opacity-50 animate-float-medium z-10"></div>
+              <div className="absolute bottom-[-40px] left-[20%] w-20 h-20 bg-lobster-400 blob-animated opacity-40 animate-float-fast z-10"></div>
+            </div>
+          </div>
+        </section>
+
+        <ContactSection />
       </main>
     </>
   );

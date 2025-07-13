@@ -4,7 +4,9 @@
 
 .blob {
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
 
+.blob-animated {
   animation: morph 20s linear infinite;
 }
 
