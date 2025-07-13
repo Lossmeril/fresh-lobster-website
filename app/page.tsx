@@ -227,6 +227,46 @@ const HomePage = () => {
                 </Button>
               </div>
             </div>
+
+            <div className="w-3/4 mx-auto flex flex-col gap-16 mt-20">
+              {/* Ludvík Mareček subsection */}
+              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                <div className="order-2 md:order-1 flex flex-col justify-center items-start p-6">
+                  <blockquote className="text-white text-3xl md:text-5xl font-bold leading-tight mb-6">
+                    „Já jsem producent, ale zajímá mě obsah. Ne tabulka.“
+                  </blockquote>
+                  <span className="text-white text-xl md:text-2xl font-semibold">
+                    — Ludvík Mareček
+                  </span>
+                </div>
+                <div className="order-1 md:order-2 flex justify-center items-center p-6">
+                  <img
+                    src="/src/images/ludvik-marecek.jpg"
+                    alt="Ludvík Mareček"
+                    className="w-full max-w-md rounded-2xl shadow-lg object-cover"
+                  />
+                </div>
+              </div>
+              {/* Kristýna Drozdová subsection */}
+              <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                <div className="flex justify-center items-center p-6">
+                  <img
+                    src="/src/images/kristyna-drozdova.jpg"
+                    alt="Kristýna Drozdová"
+                    className="w-full max-w-md rounded-2xl shadow-lg object-cover"
+                  />
+                </div>
+                <div className="flex flex-col justify-center items-start p-6">
+                  <blockquote className="text-white text-3xl md:text-5xl font-bold leading-tight mb-6">
+                    „Pro mě je zásadní kolektiv. Když to nefunguje mezi lidmi,
+                    nevznikne nic dobrého.“
+                  </blockquote>
+                  <span className="text-white text-xl md:text-2xl font-semibold">
+                    — Kristýna Drozdová
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
