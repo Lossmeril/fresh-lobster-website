@@ -1,3 +1,5 @@
+"use client";
+
 import { Person } from "@/utils/getPeople";
 import React from "react";
 
@@ -138,8 +140,8 @@ interface PeopleSectionProps {
   people: Person[];
 }
 
-const PeopleSectionComp: React.FC<PeopleSectionProps> = ({ people }) => {
+const PeopleSection: React.FC<PeopleSectionProps> = ({ people }) => {
   return <BubbleField people={people} numColorBubbles={10} />;
 };
 
-export default PeopleSectionComp;
+export default PeopleSection;

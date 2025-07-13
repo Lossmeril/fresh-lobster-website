@@ -6,12 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Button from "@/components/button";
 
-import ProjectsSection from "@/components/sections/projectsSections";
-import PeopleSection from "@/components/sections/peopleSections";
 import { UspSection } from "@/components/sections/uspSection";
 import ContactSection from "@/components/sections/contactSection";
-import ProjectsSectionComp from "@/components/sections/projectsSectionComp";
+import ProjectsSection from "@/components/sections/projectsSection";
 import { Film, getFilms } from "@/utils/getFilms";
+import PeopleSection from "@/components/sections/peopleSection";
+import { getPeople, Person } from "@/utils/getPeople";
 
 // gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -144,6 +144,7 @@ const HomePage = async () => {
   // }, []);
 
   const films: Film[] = await getFilms();
+  const people: Person[] = await getPeople();
 
   return (
     <>
@@ -298,7 +299,7 @@ const HomePage = async () => {
             záleží. Známe každý kámen na&nbsp;place. A&nbsp;víme, proč tam je.
           </p>
 
-          <ProjectsSectionComp films={films} />
+          <ProjectsSection films={films} />
 
           <div className="flex flex-row justify-center mt-10 gap-5">
             <Button link={"/"} inverse={false}>
@@ -338,7 +339,7 @@ const HomePage = async () => {
             </div>
           </div>
           <div className="w-[50%] mx-auto bg-lobster-100 blob blob-animated">
-            <PeopleSection />
+            <PeopleSection people={people} />
           </div>
         </section>
 
