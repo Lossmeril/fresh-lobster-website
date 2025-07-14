@@ -5,9 +5,11 @@ interface ProjectsSectionProps {
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ films }) => {
+  const highlights = [films[0], films[0], films[0]];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-3/4 mx-auto">
-      {films.slice(0, 3).map((film) => (
+      {highlights.map((film) => (
         <a href={"/projekty/" + film.slug} key={film.slug}>
           <div className="w-full flex flex-col items-center gap-5 px-10">
             <div className="w-full aspect-[210/297] h-auto relative overflow-hidden shadow-md">

@@ -10,6 +10,7 @@ const links = [
   ["/", "Domů"],
   ["/o-nas", "O nás"],
   ["/projekty", "Projekty"],
+  ["/spolupracovnici", "Spolupracovníci"],
   ["#kontakt", "Kontakt"],
 ];
 
@@ -65,8 +66,8 @@ const Header = () => {
             </div>
           </div>
 
-          <Button link="/" inverse={false}>
-            Objednat filma!
+          <Button link="#kontakt" inverse={false}>
+            Napište nám
           </Button>
         </div>
       </nav>

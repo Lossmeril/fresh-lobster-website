@@ -9,6 +9,7 @@ export type Person = {
   name: string;
   role: string;
   photo: string;
+  workedOn: { name: string }[];
   draft?: boolean;
 };
 
@@ -25,6 +26,7 @@ export async function getPeople(): Promise<Person[]> {
         name: data.name,
         role: data.role,
         photo: data.photo || "",
+        workedOn: data.workedOn || [],
         draft: data.draft || false,
       };
     })

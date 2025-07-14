@@ -45,5 +45,5 @@ collections:
       - { name: "name", label: "Jméno" }
       - { name: "photo", label: "Fotografie", widget: "image" }
       - { name: "role", label: "Role", widget: "string" }
-      - { name: "projects", label: "Spolupracoval/a na projektech", widget: "list", field: { name: "name", label: "Jméno" } }
+      - { name: "workedOn", label: "Spolupracoval/a na projektech", widget: "list", field: { name: "name", label: "Název projektu" } }
       - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }
