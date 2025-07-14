@@ -1,13 +1,6 @@
-import { useEffect, useRef } from "react";
-
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import Button from "@/components/button";
 
 import { UspSection } from "@/components/sections/uspSection";
-import ContactSection from "@/components/sections/contactSection";
 import ProjectsSection from "@/components/sections/projectsSection";
 import { Film, getFilms } from "@/utils/getFilms";
 import PeopleSection from "@/components/sections/peopleSection";
@@ -168,10 +161,10 @@ const HomePage = async () => {
               Vyprávíme příběhy, které v&nbsp;nás zůstanou.
             </p>
             <div className="flex flex-row gap-10 mt-10">
-              <Button link={"/"} inverse={false}>
+              <Button link={"#projekty"} inverse={false}>
                 Naše projekty
               </Button>
-              <Button link={"/"} inverse>
+              <Button link={"/o-nas"} inverse>
                 Poznej náš příběh
               </Button>
             </div>
@@ -189,7 +182,7 @@ const HomePage = async () => {
           </video>
         </section>
 
-        <div
+        {/* <div
           className="bg-lobster absolute w-80 aspect-square rounded-full scale-0 top-[100vh] left-[50%] -translate-x-1/2 z-30 blob blob-animated"
           // ref={mainCircleRef}
         ></div>
@@ -200,80 +193,77 @@ const HomePage = async () => {
         <div
           className="bg-lobster absolute w-80 aspect-square rounded-full top-[300px] scale-0 left-[75%] -translate-x-1/2 z-30 blob blob-animated"
           // ref={smallCircleRef2}
-        ></div>
+        ></div> */}
 
         <section
-          className="h-[200vh] bg-lobster relative"
+          className="bg-lobster relative py-32"
           //ref={aboutSectionRef}
         >
-          <div className="absolute top-0 left-0 w-full h-screen z-[50]">
-            <div className="w-[50%] mx-auto">
-              <h2 className="text-black text-center text-2xl uppercase font-bold mt-20">
-                Proč Fresh Lobster?
-              </h2>
-              <p className="text-white text-center text-6xl font-bold mt-5 leading-[1.2]">
-                Nechtěli jsme být jen výrobci.
-                <br />
-                Chtěli jsme být tvůrci.
-              </p>
-              <p className="text-white text-center text-xl mt-10 opacity-85 leading-tight">
-                Fresh Lobster vznikl z&nbsp;potřeby tvořit jinak. Lidsky.
-                Poctivě. Kristýna Drozdová a&nbsp;Ludvík Mareček&mdash;dvě
-                osobnosti, dvě cesty, které se potkaly na místě, kde nestačí
-                „jen to natočit“. Chtěli stát u&nbsp;zrodu projektů, které mají
-                vnitřní tah. A&nbsp;přetavit vlastní zkušenosti v&nbsp;něco, co
-                bude mít duši.
-              </p>
-              <div className="flex flex-row justify-center mt-10 gap-5">
-                <Button link={"/"} inverse>
-                  Více o našem příběhu
-                </Button>
-                <Button link={"/"} inverse>
-                  Jaké příběhy jsme vyprávěli
-                </Button>
+          <div className="w-[50%] mx-auto">
+            <h2 className="text-black text-center text-2xl uppercase font-bold">
+              Proč Fresh Lobster?
+            </h2>
+            <p className="text-white text-center text-6xl font-bold mt-5 leading-[1.2]">
+              Nechtěli jsme být jen výrobci.
+              <br />
+              Chtěli jsme být tvůrci.
+            </p>
+            <p className="text-white text-center text-xl mt-10 opacity-85 leading-tight">
+              Fresh Lobster vznikl z&nbsp;potřeby tvořit jinak. Lidsky. Poctivě.
+              Kristýna Drozdová a&nbsp;Ludvík Mareček&mdash;dvě osobnosti, dvě
+              cesty, které se potkaly na místě, kde nestačí „jen to natočit“.
+              Chtěli stát u&nbsp;zrodu projektů, které mají vnitřní tah.
+              A&nbsp;přetavit vlastní zkušenosti v&nbsp;něco, co bude mít duši.
+            </p>
+            <div className="flex flex-row justify-center mt-10 gap-5">
+              <Button link={"/o-nas"} inverse>
+                Více o našem příběhu
+              </Button>
+              <Button link={"#projekty"} inverse>
+                Jaké příběhy jsme vyprávěli
+              </Button>
+            </div>
+          </div>
+
+          <div className="w-3/4 mx-auto flex flex-col gap-16 mt-20">
+            {/* Ludvík Mareček subsection */}
+            <div className="h-80 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+              <div className="order-2 md:order-1 flex flex-col justify-center items-start p-6">
+                <blockquote className="text-white text-3xl md:text-5xl font-bold italic leading-tight mb-6">
+                  „Já jsem producent, ale&nbsp;zajímá mě obsah. Ne tabulka.“
+                </blockquote>
+                <span className="text-white text-xl md:text-2xl">
+                  — Ludvík Mareček
+                </span>
+              </div>
+              <div className="order-1 md:order-2 flex justify-center items-center p-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/src/images/ludvik-marecek.jpg"
+                  alt="Ludvík Mareček"
+                  className="w-full max-w-md rounded-2xl shadow-lg object-cover"
+                />
               </div>
             </div>
 
-            <div className="w-3/4 mx-auto flex flex-col gap-16 mt-20">
-              {/* Ludvík Mareček subsection */}
-              <div className="h-80 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                <div className="order-2 md:order-1 flex flex-col justify-center items-start p-6">
-                  <blockquote className="text-white text-3xl md:text-5xl font-bold leading-tight mb-6">
-                    „Já jsem producent, ale zajímá mě obsah. Ne tabulka.“
-                  </blockquote>
-                  <span className="text-white text-xl md:text-2xl font-semibold">
-                    — Ludvík Mareček
-                  </span>
-                </div>
-                <div className="order-1 md:order-2 flex justify-center items-center p-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/src/images/ludvik-marecek.jpg"
-                    alt="Ludvík Mareček"
-                    className="w-full max-w-md rounded-2xl shadow-lg object-cover"
-                  />
-                </div>
+            {/* Kristýna Drozdová subsection */}
+            <div className="h-80 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+              <div className="flex justify-center items-center p-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/src/images/kristyna-drozdova.jpg"
+                  alt="Kristýna Drozdová"
+                  className="w-full max-w-md rounded-2xl shadow-lg object-cover"
+                />
               </div>
-
-              {/* Kristýna Drozdová subsection */}
-              <div className="h-80 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-                <div className="flex justify-center items-center p-6">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/src/images/kristyna-drozdova.jpg"
-                    alt="Kristýna Drozdová"
-                    className="w-full max-w-md rounded-2xl shadow-lg object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-center items-start p-6">
-                  <blockquote className="text-white text-3xl md:text-5xl font-bold leading-tight mb-6">
-                    „Pro mě je zásadní kolektiv. Když to nefunguje mezi lidmi,
-                    nevznikne nic dobrého.“
-                  </blockquote>
-                  <span className="text-white text-xl md:text-2xl font-semibold">
-                    — Kristýna Drozdová
-                  </span>
-                </div>
+              <div className="flex flex-col justify-center items-start p-6">
+                <blockquote className="text-white text-3xl md:text-5xl font-bold italic leading-tight mb-6">
+                  „Pro mě je zásadní kolektiv. Když to nefunguje mezi lidmi,
+                  nevznikne nic dobrého.“
+                </blockquote>
+                <span className="text-white text-xl md:text-2xl">
+                  — Kristýna Drozdová
+                </span>
               </div>
             </div>
           </div>
@@ -283,7 +273,7 @@ const HomePage = async () => {
         {/* ---------------------- PROJEKTY ---------------------- */}
         {/* ------------------------------------------------------ */}
 
-        <section className="h-[100vh] bg-white relative">
+        <section id="projekty" className="h-[100vh] bg-white relative">
           <h2 className="text-lobster text-center text-2xl uppercase font-bold mt-20">
             Naše projekty
           </h2>
@@ -302,10 +292,10 @@ const HomePage = async () => {
           <ProjectsSection films={films} />
 
           <div className="flex flex-row justify-center mt-10 gap-5">
-            <Button link={"/"} inverse={false}>
+            <Button link={"/projekty"} inverse={false}>
               Prohlédnout všechny projekty
             </Button>
-            <Button link={"/"} inverse={false}>
+            <Button link={"#spolupracovnici"} inverse={true}>
               Kdo s námi spolupracuje
             </Button>
           </div>
@@ -315,7 +305,10 @@ const HomePage = async () => {
         {/* ---------------------- SPOLUPRACOVNÍCI ---------------------- */}
         {/* ------------------------------------------------------------- */}
 
-        <section className="h-[100vh] bg-white relative flex p-[10%] gap-10">
+        <section
+          id="spolupracovnici"
+          className="h-[100vh] bg-white relative flex p-[10%] gap-10"
+        >
           <div className="w-[50%] mx-auto flex flex-col justify-center items-start">
             <h2 className="text-lobster text-left text-2xl uppercase font-bold mt-20">
               Koho máme kolem sebe

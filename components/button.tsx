@@ -1,7 +1,8 @@
 interface ButtonProps {
   children: React.ReactNode;
   link: string;
-  inverse: boolean;
+  inverse?: boolean;
+  mono?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({ children, link, inverse }) => {

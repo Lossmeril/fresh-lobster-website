@@ -1,6 +1,7 @@
 import React from "react";
 
 import ContactForm from "../contactForm";
+import { SiInstagram } from "react-icons/si";
 
 export const ContactSection: React.FC = () => (
   <section id="kontakt" className="bg-white relative overflow-hidden pb-20">
@@ -15,7 +16,63 @@ export const ContactSection: React.FC = () => (
       Jsme otevření projektům, lidem i&nbsp;výzvám
     </p>
     <div className="grid grid-cols-1 lg:grid-cols-3 w-[90%] lg:w-[80%] mx-auto">
-      <div></div>
+      <div className="flex flex-col gap-8 justify-center mb-10 lg:mb-0">
+        <a
+          href="mailto:ludvik@freshlobster.cz"
+          className="text-lobster underline"
+        >
+          {" "}
+          <div className="flex flex-row items-center gap-4 text-xl">
+            <div className="bg-lobster blob-animated h-12 w-12 grid place-content-center text-white">
+              <SiInstagram size={24} />
+            </div>
+            <p>@freshlobster</p>
+          </div>
+        </a>
+
+        <div>
+          <h3 className="text-lobster text-xl uppercase font-bold">
+            Ludvík Mareček
+          </h3>
+          <p className="font-bold mb-5">producent</p>
+          <p className="text-sm text-gray-800">
+            E-mail:{" "}
+            <a
+              href="mailto:ludvik@freshlobster.cz"
+              className="text-lobster underline"
+            >
+              ludvik@freshlobster.cz
+            </a>
+          </p>
+          <p className="text-sm text-gray-800">
+            Telefon:{" "}
+            <a href="tel:+420603152835" className="text-lobster underline">
+              +420 603 152 835
+            </a>
+          </p>
+        </div>
+        <div>
+          <h3 className="text-lobster text-xl uppercase font-bold">
+            Kristýna Drozdová
+          </h3>
+          <p className="font-bold mb-5">vedoucí natáčení</p>
+          <p className="text-sm text-gray-800">
+            E-mail:{" "}
+            <a
+              href="mailto:kristyna@freshlobster.cz"
+              className="text-lobster underline"
+            >
+              kristyna@freshlobster.cz
+            </a>
+          </p>
+          <p className="text-sm text-gray-800">
+            Telefon:{" "}
+            <a href="tel:+420774084626" className="text-lobster underline">
+              +420 774 084 626
+            </a>
+          </p>
+        </div>
+      </div>
       <div className="lg:col-span-2 w-full">
         <ContactForm />
       </div>
