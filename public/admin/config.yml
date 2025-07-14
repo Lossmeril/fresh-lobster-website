@@ -18,14 +18,22 @@ collections:
     slug: "{{slug}}"
     preview: true
     fields:
-      - { name: "title", label: "Název" }
-      - { name: "release_date", label: "Datum vydání", widget: "datetime" }
-      - { name: "synopsis", label: "Synopse", widget: "text" }
       - { name: "poster", label: "Plakát", widget: "image" }
-      - { name: "still", label: "Obrázek", widget: "image" }
-      - { name: "trailer_url", label: "Odkaz a trailer", widget: "string", required: false }
+      - { name: "still", label: "Snímek", widget: "image" }
+      - { name: "title", label: "Název projektu / filmu / seriálu" }
+      - { name: "release_year", label: "Rok zveřejnění", widget: "number" }
+      - { name: "director", label: "Režie" }
+      - { name: "screenplay", label: "Scénář" }
+      - { name: "camera", label: "Kamera" }
+      - { name: "music", label: "Hudba" }
+      - { name: "collaborators", label: "Spolupracovali", widget: "list", field: { name: "name", label: "Jméno" } }
+      - { name: "cast", label: "Hrají", widget: "list", field: { name: "name", label: "Jméno" } }
+      - { name: "short_synopsis", label: "Krátká synopse", widget: "text" }
+      - { name: "long_synopsis", label: "Dlouhá synopse", widget: "text" }
+      - { name: "details", label: "Podrobnosti", widget: "markdown" }
+      - { name: "downloads", label: "Ke stažení", widget: "list", field: { name: "file", label: "Soubor", widget: "file" } }
+      - { name: "trailer_url", label: "YouTube iframe s trailerem", widget: "string", required: false }
       - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }
-      - { name: "body", label: "Obsah článku", widget: "markdown" }
 
   - name: "people"
     label: "Spolupracovníci"
@@ -37,4 +45,5 @@ collections:
       - { name: "name", label: "Jméno" }
       - { name: "photo", label: "Fotografie", widget: "image" }
       - { name: "role", label: "Role", widget: "string" }
+      - { name: "projects", label: "Spolupracoval/a na projektech", widget: "list", field: { name: "name", label: "Jméno" } }
       - { name: "draft", label: "Je koncept?", widget: "boolean", default: false }

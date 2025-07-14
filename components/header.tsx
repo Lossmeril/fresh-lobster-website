@@ -10,7 +10,7 @@ const links = [
   ["/", "Domů"],
   ["/o-nas", "O nás"],
   ["/projekty", "Projekty"],
-  ["/kontakt", "Kontakt"],
+  ["#kontakt", "Kontakt"],
 ];
 
 interface NavbarLinkProps {

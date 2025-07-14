@@ -15,9 +15,9 @@ export default async function FilmsPage() {
         }
       />
       <div className="w-full max-w-6xl mx-auto px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-lobster mb-10 text-center uppercase tracking-wide">
-          Projekty
-        </h1>
+        <h2 className="text-3xl md:text-4xl font-bold text-lobster mb-10 text-center uppercase tracking-wide">
+          Čemu jsme dali vzniknout
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {films.map((film) => (
             <a
@@ -26,22 +26,22 @@ export default async function FilmsPage() {
               className="block group"
             >
               <div className="w-full flex flex-col items-center gap-4 px-4">
-                <div className="w-full aspect-[210/297] h-auto relative overflow-hidden shadow-md rounded-lg">
+                <div className="w-full aspect-[210/297] h-auto relative overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={film.still}
+                    src={film.poster}
                     alt={film.title}
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                    className="object-fill w-full h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="w-full">
-                  <div className="bg-lobster w-full px-3 py-1 rounded-t">
+                  <div className="bg-lobster w-full px-3 py-1">
                     <h3 className="text-white text-lg font-semibold">
                       {film.title}
                     </h3>
                   </div>
                   <p className="text-gray-700 text-sm mt-2">
-                    {film.release_date.getFullYear()}
+                    {film.release_year + " • " + film.director}
                   </p>
                 </div>
               </div>

@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html className=" scroll-smooth" lang="cs">
       <body className={`${font.className} max-w-screen overflow-x-hidden`}>
         <Header />
         {children}

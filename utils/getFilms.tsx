@@ -6,11 +6,21 @@ import matter from "gray-matter";
 
 export type Film = {
   slug: string;
+  poster: string;
   still: string;
   title: string;
-  synopsis: string;
-  trailer_url: string;
-  release_date: Date;
+  release_year: number;
+  director: string;
+  screenplay: string;
+  camera: string;
+  music: string;
+  collaborators: { name: string }[];
+  cast: { name: string }[];
+  short_synopsis: string;
+  long_synopsis: string;
+  details: string;
+  downloads: { file: string }[];
+  trailer_url?: string;
   draft?: boolean;
 };
 
@@ -24,11 +34,21 @@ export async function getFilms(): Promise<Film[]> {
       const { data } = matter(fileContent);
       return {
         slug: filename.replace(".md", ""),
+        poster: data.poster,
         still: data.still,
         title: data.title,
-        synopsis: data.synopsis,
+        release_year: data.release_year,
+        director: data.director,
+        screenplay: data.screenplay,
+        camera: data.camera,
+        music: data.music,
+        collaborators: data.collaborators || [],
+        cast: data.cast || [],
+        short_synopsis: data.short_synopsis,
+        long_synopsis: data.long_synopsis,
+        details: data.details,
+        downloads: data.downloads || [],
         trailer_url: data.trailer_url,
-        release_date: data.release_date,
         draft: data.draft,
       };
     })
