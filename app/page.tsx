@@ -236,26 +236,12 @@ const HomePage = async () => {
                   — Ludvík Mareček
                 </span>
               </div>
-              <div className="order-1 md:order-2 flex justify-center items-center p-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/src/images/ludvik-marecek.jpg"
-                  alt="Ludvík Mareček"
-                  className="w-full max-w-md rounded-2xl shadow-lg object-cover"
-                />
-              </div>
+              <div className="order-1 md:order-2 flex justify-center items-center p-6"></div>
             </div>
 
             {/* Kristýna Drozdová subsection */}
             <div className="h-80 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-              <div className="flex justify-center items-center p-6">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/src/images/kristyna-drozdova.jpg"
-                  alt="Kristýna Drozdová"
-                  className="w-full max-w-md rounded-2xl shadow-lg object-cover"
-                />
-              </div>
+              <div className="flex justify-center items-center p-6"></div>
               <div className="flex flex-col justify-center items-start p-6">
                 <blockquote className="text-white text-3xl md:text-5xl font-bold italic leading-tight mb-6">
                   „Pro mě je zásadní kolektiv. Když to nefunguje mezi lidmi,
