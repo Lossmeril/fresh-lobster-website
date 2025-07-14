@@ -3,6 +3,7 @@ import { Jost } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ContactSection from "@/components/sections/contactSection";
 
 const font = Jost({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body className={`${font.className} max-w-screen overflow-x-hidden`}>
         <Header />
         {children}
-
+        <ContactSection />
         <Footer />
       </body>
     </html>

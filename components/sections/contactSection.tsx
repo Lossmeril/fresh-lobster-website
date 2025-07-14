@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../button";
+
 import ContactForm from "../contactForm";
 
 export const ContactSection: React.FC = () => (
@@ -15,7 +15,8 @@ export const ContactSection: React.FC = () => (
       Jsme otevření projektům, lidem i&nbsp;výzvám
     </p>
     <div className="grid grid-cols-1 lg:grid-cols-2">
-      <div></div> <ContactForm />
+      <div></div>
+      <ContactForm />
     </div>
   </section>
 );
