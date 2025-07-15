@@ -4,7 +4,7 @@ backend:
 
 local_backend: true
 
-logo_url: "https://coalmarketing.cz/wp-content/uploads/2024/08/coalmarketing_logo_long_color-black-1024x239.png"
+logo_url: "../src/img/logo-color-light.png"
 locale: "cs"
 
 media_folder: "public/uploads"
